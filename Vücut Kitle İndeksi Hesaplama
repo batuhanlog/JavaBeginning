@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Patika {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double boy,indek;
+        int kilo;
+
+
+        System.out.print("Boy : ");
+        boy = scanner.nextDouble();
+
+        System.out.print("Kilonuz : ");
+        kilo = scanner.nextInt();
+
+
+        indek = kilo / (boy*boy);
+        System.out.println("Vücut kitle endeksi : "+indek);
+
+    }
+}
+
+
