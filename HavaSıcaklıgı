@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Patika {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int sicaklik;
+        System.out.println("Sıcaklık Derecesini Giriniz : ");
+        sicaklik = input.nextInt();
+
+        if (sicaklik >= 0 && sicaklik <= 4) {
+            System.out.println("Kayak");
+        } else if (sicaklik >= 5 && sicaklik <= 15) {
+            System.out.println("Sinema");
+        } else if (sicaklik >= 16 && sicaklik <= 24) {
+            System.out.println("Piknik");
+        } else {
+            System.out.println("Yüzme");
+        }
+    }
+}
