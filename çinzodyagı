@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Patika {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Doğum yılınızı giriniz: ");
+        int dogumYili = scanner.nextInt();
+
+        String cinZodyagi = hesaplaCinZodyagi(dogumYili);
+
+        System.out.println("Çin Zodyağı Burcunuz: " + cinZodyagi);
+
+        scanner.close();
+    }
+
+    public static String hesaplaCinZodyagi(int dogumYili) {
+        String[] zodyaklar = {
+                "Maymun", "Horoz", "Köpek", "Domuz", "Fare", "Öküz",
+                "Kaplan", "Tavşan", "Ejderha", "Yılan", "At", "Koyun"
+        };
+
+        int indeks = dogumYili % 12;
+        return zodyaklar[indeks];
+    }
+}
