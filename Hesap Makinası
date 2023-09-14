@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Patika{
+    public static void main(String []argh) {
+        Scanner imp = new Scanner(System.in);
+
+        int n1,n2,select;
+
+       System.out.print("1.Sayıyı Giriniz : ");
+       n1=imp.nextInt();
+       System.out.print("2.Sayıyı Giriniz : ");
+       n2=imp.nextInt();
+
+       System.out.println("1 - Toplama\n2 - Çıkarma \n3 - Çarpma\n4 - Bölme");
+       System.out.print("Seçiminiz : ");
+       select = imp.nextInt();
+
+       switch (select){
+           case 1:
+               System.out.println("Toplam : "+(n1+n2));
+               break;
+           case 2:
+               System.out.println("Çıkarma : "+(n1-n2));
+               break;
+           case 3:
+               System.out.println("Çarpma : "+(n1*n2));
+               break;
+           case 4:
+               System.out.println("Bölme : "+(n1/n2));
+               break;
+           default:
+               System.out.println("Geçersiz Seçenek!");
+
+
+       }
+
+
+        }
+    }
+
+
+
+
