@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Patika {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String username, password, newpassword;
+        int secim;
+
+        System.out.println("Kullanıcı Adınız : ");
+        username = input.nextLine();
+
+        System.out.println("Şifrenizi Giriniz : ");
+        password = input.nextLine();
+
+        if (username.equals("batuhan") && password.equals("kayahan")) {
+            System.out.println("Giriş Yaptınız : ");
+        } else {
+            System.out.println("Bilgileriniz Yanlış! ");
+            System.out.println("Şifrenizi Sıfırlamak İster misiniz ?");
+            System.out.println("1 - EVET\n2 - HAYIR");
+            secim = input.nextInt();
+
+            if (secim == 1) {
+                System.out.println("Yeni Şifrenizi Giriniz : ");
+                newpassword = input.next();
+
+                if (newpassword.equals("kayahan")) {
+                    System.out.println("Aynı Şifreyi Kullanamazsınız!");
+                } else {
+                    System.out.println("Şifreniz Başarıyla Değiştirildi.");
+                }
+            } else if (secim == 2) {
+                System.out.println("Şifreniz Hatalı Olduğu İçin Giriş Yapamıyorsunuz!");
+            } else {
+                System.out.println("Yanlış Tercih Yaptınız!");
+            }
+        }
+    }
+}
