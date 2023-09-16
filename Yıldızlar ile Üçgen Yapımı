@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+
+public class Patika {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Elmasın yüksekliğini girin: ");
+        int yukseklik = scanner.nextInt();
+
+        if (yukseklik % 2 == 0) {
+            yukseklik--;
+        }
+
+        int yildizSayisi = 1;
+        int boslukSayisi = yukseklik / 2;
+
+        for (int i = 0; i < yukseklik / 2 + 1; i++) {
+            for (int j = 0; j < boslukSayisi; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < yildizSayisi; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            yildizSayisi += 2;
+            boslukSayisi--;
+        }
+
+        yildizSayisi = yukseklik - 2;
+        boslukSayisi = 1;
+        for (int i = 0; i < yukseklik / 2; i++) {
+            for (int j = 0; j < boslukSayisi; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < yildizSayisi; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            yildizSayisi -= 2;
+            boslukSayisi++;
+        }
+
+
+    }
+}
