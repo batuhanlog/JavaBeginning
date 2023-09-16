@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Patika {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+
+        System.out.print("Bir sayı girin: ");
+
+ int n;
+        System.out.println("Sınır Sayısını Gir");
+        n=input.nextInt();
+
+
+        for (int i = 1, a = 1; i <= n && a <= n; i *= 4, a *= 5) {
+            System.out.println("4.ün Kuvvetleri :   "+i+"   ||  5'in Kuvvetleri : "+(a));
+
+            }
+        }
+
+}
