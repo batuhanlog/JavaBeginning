@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class KombinasyonHesaplama {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("n'i girin: ");
+        int n = input.nextInt();
+        
+        System.out.print("r'yi girin: ");
+        int r = input.nextInt();
+        
+        if (r > n) {
+            System.out.println("r, n'den büyük olamaz!");
+        } else {
+            long kombinasyon = kombinasyonHesapla(n, r);
+            System.out.println("C(" + n + ", " + r + ") = " + kombinasyon);
+        }
+    }
+    
+    public static long faktoriyelHesapla(int sayi) {
+        long faktoriyel = 1;
+        for (int i = 1; i <= sayi; i++) {
+            faktoriyel *= i;
+        }
+        return faktoriyel;
+    }
+    
+    public static long kombinasyonHesapla(int n, int r) {
+        long kombinasyon = faktoriyelHesapla(n) / (faktoriyelHesapla(r) * faktoriyelHesapla(n - r));
+        return kombinasyon;
+    }
+}
