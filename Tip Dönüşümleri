@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class TipDonusumProgrami {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Kullanıcıdan tam sayıyı al
+        System.out.print("Bir tam sayı girin: ");
+        int tamSayi = scanner.nextInt();
+
+        // Kullanıcıdan ondalıklı sayıyı al
+        System.out.print("Bir ondalıklı sayı girin: ");
+        double ondalikliSayi = scanner.nextDouble();
+
+        // Tam sayıyı ondalıklı sayıya dönüştürme
+        double tamSayiOndalikli = (double) tamSayi;
+
+        // Ondalıklı sayıyı tam sayıya dönüştürme
+        int ondalikliSayiTamSayi = (int) ondalikliSayi;
+
+        // Sonuçları ekrana yazdırma
+        System.out.println("Girilen tam sayı: " + tamSayi);
+        System.out.println("Girilen ondalıklı sayı: " + ondalikliSayi);
+        System.out.println("Tam sayıyı ondalıklı sayıya dönüştürdüğümüzde: " + tamSayiOndalikli);
+        System.out.println("Ondalıklı sayıyı tam sayıya dönüştürdüğümüzde: " + ondalikliSayiTamSayi);
+    }
+}
