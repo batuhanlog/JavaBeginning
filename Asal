@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class RecursivePrime {
+
+    static boolean isPrime(int number, int divisor) {
+        if (number <= 1) {
+            return false; // 1 ve daha küçük sayılar asal değil
+        }
+        if (divisor == 1) {
+            return true; // Sayı yalnızca 1 ve kendisiyle tam bölünüyorsa asaldır
+        }
+        if (number % divisor == 0) {
+            return false; // Eğer bölen bulunursa asal değil
+        }
+        // Rekürsif olarak bir sonraki böleni kontrol et
+        return isPrime(number, divisor - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir sayı giriniz: ");
+        int number = scanner.nextInt();
+
+        boolean isPrime = isPrime(number, number / 2); // İlk bölen olarak sayının yarısı verilir
+        if (isPrime) {
+            System.out.println(number + " bir asal sayıdır.");
+        } else {
+            System.out.println(number + " bir asal sayı değildir.");
+        }
+    }
+}
