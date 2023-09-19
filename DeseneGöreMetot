@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class RecursiveNumberManipulation {
+
+    static void manipulateNumber(int number) {
+        System.out.println(number); // Her adımda mevcut sayıyı yazdır
+
+        if (number <= 0) {
+            return; // Sayı negatif veya 0 ise işlemi sonlandır
+        }
+
+        // 5 çıkar ve tekrar metodu çağır
+        manipulateNumber(number - 5);
+
+        // Negatif veya 0 olduktan sonra 5 ekleyip tekrar metodu çağır
+        if (number <= 0) {
+            manipulateNumber(number + 5);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir sayı giriniz: ");
+        int n = scanner.nextInt();
+
+        manipulateNumber(n);
+    }
+}
