@@ -1,2 +1,2 @@
 # JavaBeginning
-Java guide for beginners 101
+Java guide for beginners 101*
